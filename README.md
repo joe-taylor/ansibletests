@@ -11,9 +11,9 @@ of actual practical value, unless you're learning ansible too.
 
 ## Usage
 
-cd into a directory, follow any applicable instructions (if present in the
-associated README), and then run `vagrant up`. Use `vagrant ssh` to inspect
-what's been provisioned in that folder's vm. Finally, use `vagrant
+cd into a directory, follow any applicable instructions present in the
+folder's README, and then run `vagrant up`. Optionally, use `vagrant ssh` to
+inspect what's been provisioned in that folder's vm. Finally, use `vagrant
 destroy -f` to destroy the vms when you're finished.
 
 e.g.
