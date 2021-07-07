@@ -9,7 +9,8 @@ First, copy any public keys you wish to port over into the `pubkeys`
 directory. You can call them whatever you like, but the file extension
 must be `.pub`.
 
-e.g.
+e.g., to copy one public key from your `~/.ssh` directory, run something like
+the following.
 
     cp ~/.ssh/my_pub_key.pub ./pubkeys
 
