@@ -1,10 +1,22 @@
 ---
 - name: add public keys for ssh
   hosts: all
+  become: true
+  vars:
+    users:
+      - app
+      - appadm
   tasks:
+    - name: create users
+      user:
+        name: "{{item}}"
+        state: present
+      loop: "{{ users }}"
     - name: add all keys in folder
       ansible.posix.authorized_key:
-        user: vagrant
+        user: "{{item[0]}}"
         state: present
-        key: "{{ lookup('file', item) }}"
-      loop: "{{ lookup('fileglob', 'pubkeys/*.pub', wantlist=true)}}"
+        key: "{{ lookup('file', item[1]) }}"
+      with_nested:
+        - "{{ users }}"
+        - "{{ lookup('fileglob', 'pubkeys/*.pub', wantlist=true)}}"
