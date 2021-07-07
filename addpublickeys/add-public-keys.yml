@@ -1,0 +1,8 @@
+---
+- name: add public keys for ssh
+  hosts: all
+  tasks:
+    - name: add all keys in folder
+      debug:
+        var: item
+      loop: "{{ lookup('fileglob', 'pubkeys/*.pub', wantlist=true)}}"
