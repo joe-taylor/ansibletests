@@ -13,6 +13,8 @@ e.g., to copy one public key from your `~/.ssh` directory, run something like
 the following.
 
     cp ~/.ssh/my_pub_key.pub ./pubkeys
+    
+## Testing locally
 
 When you're ready to run the playbook, call `vagrant up` and then call
 `vagrant provision` as often as you'd like after that.
