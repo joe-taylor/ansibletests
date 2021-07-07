@@ -1,7 +1,7 @@
 # Ansible Tests
 
-This repo is a storehouse for a random assortment of Ansible playbooks; mainly
-works in progress or feature demos/tests. Each folder is a self-contained
+This repo is a storehouse for my random assortment of throwaway Ansible playbooks; mainly
+works in progress or feature demos and tests. Each folder is a self-contained
 suite of one or more playbooks, and should also include a Vagrantfile to spin
 up at least one host in which to run aforementioned playbooks.
 
