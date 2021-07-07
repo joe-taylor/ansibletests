@@ -1,9 +1,13 @@
 # Ansible Tests
 
-This is a storing house for my random assortment of test playbooks. Each
-folder is a self-contained ansible environment containing a collection of one
-or more playbooks, and each folder includes a Vagrantfile to spin up at least
-one host in which to run aforementioned playbooks.
+This repo is a storehouse for my random assortment of Ansible playbooks in
+progress. Each folder is a self-contained ansible environment containing a
+collection of one or more playbooks, and each folder includes a Vagrantfile
+to spin up at least one host in which to run aforementioned playbooks.
+
+This being a learning repository, the playbooks are more likely to be
+contrived to try out some ansible features than they are to be of actual
+practical value.
 
 ## Usage
 
