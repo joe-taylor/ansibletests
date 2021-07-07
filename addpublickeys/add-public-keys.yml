@@ -3,6 +3,8 @@
   hosts: all
   tasks:
     - name: add all keys in folder
-      debug:
-        var: item
+      ansible.posix.authorized_key:
+        user: vagrant
+        state: present
+        key: "{{ lookup('file', item) }}"
       loop: "{{ lookup('fileglob', 'pubkeys/*.pub', wantlist=true)}}"
